@@ -13,7 +13,7 @@ now = Sys.time()
 now_d = Sys.Date()
 
 outdir = "/home/[username]/R"
-mydb = dbConnect(MySQL(), user='username', password='password', dbname='test_arduino', host='192.168.1.100')
+mydb = dbConnect(MySQL(), user='username', password='password', dbname='arduino_data', host='192.168.1.1')
 dbListTables(mydb)
 dat <- dbSendQuery(mydb, "SELECT * FROM `temps` WHERE `temp_date` >= now() - INTERVAL 2 DAY;")
 df = fetch(dat, n=-1)
