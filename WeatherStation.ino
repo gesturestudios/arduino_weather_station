@@ -1,3 +1,21 @@
+/* Arduino weather station.  This Arduino script pushes sensor data from an Arduino to a MySQL database.  
+See the rest of this git repository for additional details and setup info.
+
+Connections:
+Ethernet shield on top of Arduino Uno.  
+
+BMP085 pressure sensor:
+VCC -> 3.3V
+GND -> Ground
+SCL -> A5 (i2c clock)
+SDA -> A4 (i2c data)
+
+DHT11 sensor:
++ -> 5V
+OUT -> A3
+- -> Ground
+*/ 
+
 #include <Ethernet.h>
 #include <MySQL_Connection.h>
 #include <MySQL_Cursor.h>
