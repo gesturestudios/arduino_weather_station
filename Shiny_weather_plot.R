@@ -16,7 +16,7 @@ ui <- fluidPage(
 )
 
 server <- function(input, output) {
-  mydb = dbConnect(MySQL(), user='arduinouser', password='arduino', dbname='arduino_data', host='192.168.1.132')
+  mydb = dbConnect(MySQL(), user='username', password='password', dbname='arduino_data', host='192.168.1.132')
   table <- reactive({
     table = dbGetQuery(mydb, paste("SELECT * FROM `temps` WHERE `temp_date` >= now() - INTERVAL ", input$days ," DAY;"))
   })
