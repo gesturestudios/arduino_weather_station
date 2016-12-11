@@ -5,6 +5,7 @@ This git repository is for documentation on the development of my Arduino weathe
 https://gesturestudios.wordpress.com/2016/10/31/weather-station/#more-24
 
 The steps are:
+
 1. Script to set up programs on an Ubuntu computer (install LAMP)
 2. Set up mysql for recieveing data from the Arduino 
 3. Deploy the Arduino with sensors to collect data and send to the LAMP server
